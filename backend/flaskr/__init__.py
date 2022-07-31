@@ -102,10 +102,7 @@ def create_app(test_config=None):
              abort(422)
   
     '''
-    @TODO: 
-    Create an endpoint to POST a new question, 
-    which will require the question and answer text, 
-    category, and difficulty score.
+    Create an endpoint to POST a new question
     '''
     @app.route("/questions", methods=["POST"])
     def create_question():
@@ -136,7 +133,6 @@ def create_app(test_config=None):
           abort(422)
   
     '''
-    @TODO: 
     Create a POST endpoint to get questions based on a search term. 
     It should return any questions for whom the search term 
     is a substring of the question.  
@@ -157,7 +153,6 @@ def create_app(test_config=None):
                 "questions"})
 
     """
-    @TODO:
     Create a GET endpoint to get questions based on category.
     """
     @app.route("/categories/<int:id>/questions")
@@ -179,7 +174,6 @@ def create_app(test_config=None):
         else:
             abort(404)
     """
-    @TODO:
     Create a POST endpoint to get questions to play the quiz.
     """
     @app.route('/quizzes', methods=['POST'])
